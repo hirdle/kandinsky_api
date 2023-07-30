@@ -13,7 +13,7 @@ app.get('/', async (req, res) => {
     
     const image = await getImage(req.query.q)
     
-    res.json({"image": "data:image/png;base64,/"+image})
+    res.json({"image": "data:image/png;base64,"+image})
 })
 
 app.listen(process.env.APP_PORT, process.env.APP_IP)
